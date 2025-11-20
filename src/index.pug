@@ -1,0 +1,221 @@
+include __sliders.pug
+
+<!DOCTYPE html>
+html(lang="ru-RU")
+  head
+    title [[*seotitle]]
+    base(href="[[++site_url]]")
+    meta(name="keywords", content="[[*seokeywords]]")
+    meta(name="description", content="[[*seodescription]]")
+      //- meta(name="robots", content="noindex")
+
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    meta(name="HandheldFriendly", content="True")
+    meta(name="MobileOptimized", content="320")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(http-equiv="cleartype", content="on")
+    meta(name="imagetoolbar", content="no")
+    meta(name="msthemecompatible", content="no")
+    meta(http-equiv="cleartype", content="on")
+    meta(name="format-detection", content="telephone=no")
+    meta(name="format-detection", content="address=no")
+    meta(name="theme-color", content="#ffffff")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+    link(rel="apple-touch-icon-precomposed", sizes="114x114", href="assets/img/apple/h/apple-touch-icon.png")
+    link(rel="apple-touch-icon-precomposed", sizes="72x72", href="assets/img/apple/m/apple-touch-icon.png")
+    link(rel="apple-touch-icon-precomposed", href="assets/img/apple/l/apple-touch-icon-precomposed.png")
+    link(rel="shortcut icon", href="assets/img/apple/l/apple-touch-icon.png")
+    link(rel="shortcut icon", href="assets/img/fav.jpg")
+    meta(property="og:url", content="[[*template:in=`1`:then=`[[~[[*id]]]]`:else=`[[++site_url]][[~[[*id]]]]`]]")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="[[!*seotitle:isnot=``:then=`[[*seotitle]]`:else=`[[*pagetitle]]`]]")
+    meta(property="og:description", content="[[*seodescription]]")
+    meta(property="og:image", content="[[++assets_url]]img/og-img.jpg")
+
+    link(rel="stylesheet", href="assets/css/app.css")
+    link(rel="stylesheet", href="assets/css/vendors.css")
+
+  body
+    //- .mask
+    //-   #loader
+
+    .site
+      .topBlock__area
+        .topBlock
+          .like__area
+            .likeBlock
+              // <a class="like_twitter" onclick="return share.twitter(share_url,share_title);" href="#"><i
+              // class="fa fa-twitter" aria-hidden="true"></i></a>
+              // <a class="like_gp" onclick="return share.gp(share_url,share_title);" href="#"><i
+              // class="fa fa-google-plus" aria-hidden="true"></i></a>
+              a.like_vk(onclick="return share.vk(share_url,share_title,share_image,share_desc);", href="#")
+                i.fa.fa-vk(aria-hidden="true")
+              // <a class="like_ok" onclick="return share.ok(share_url,share_desc);" href="#"><i
+              // class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+              // <a class="like_fb" onclick="return share.fb(share_url,share_title,share_image,share_desc);" href="#"><i
+              // class="fa fa-facebook" aria-hidden="true"></i></a>
+              // <a id="sb6" class="sc-b6" onclick="return share.mail(share_url,share_title,share_image,share_desc);" href="#"></a>
+          .search__area
+            form.form-search(action="[[~[[+landing]]]]", method="[[+method]]")
+              .inputs-group
+                input#123.search-input(type="text", name="[[+searchIndex]]", placeholder="Поиск по сайту")
+                input(type="hidden", name="id", value="[[+landing]]")
+                input.search-submit(type="submit", value="")
+
+      .header__area
+        header.header
+          .header__logo
+            a(href="/")
+              img(
+                alt="Ремонт квартир в Саратове" 
+                src="assets/img/logo1.png"
+                )
+              span Сарремонт
+          .header__newInfo
+            span Ремонт квартир, офисов, помещений под ключ
+            span Саратов, Энгельс, Москва
+            span Звоните с 8:00 до 21:00
+            span Бесплатная консультация!
+          .header__info
+            .header__infoInner
+              i.fa.fa-phone-square(aria-hidden="true")
+              a(href="tel:[[pdoField? &id=`1` &field=`mainPhone`]]") [[pdoField? &id=`1` &field=`mainPhone`]]
+            .header__infoInner
+              i.fa.fa-envelope(aria-hidden="true")
+              a(href="mailto:[[pdoField? &id=`1` &field=`mainEmail`]]") [[pdoField? &id=`1` &field=`mainEmail`]]
+            .slogan1 ремонт со знаком качества!!!
+      .topMenu__area
+        nav(class="topMenu__outer")
+          .menuButton__outer
+            .menuButton
+              span
+              span
+              span
+          ul.topMenu
+            li.first.active
+              a(href="/") Главная
+            li
+              a(href="servises/") Наши услуги
+            li
+              a(href="price.html") Цены
+            li
+              a(href="actions/") Акции
+            li.last
+              a(href="kontaktyi.html") Контакты
+
+      +mainSlider
+
+      .content__area
+        .content__outer
+          .content__inner
+            .offer
+              .offerText Комплексный ремонт квартиры за 2 месяца или вернем 1000 рублей за каждый день просрочки
+              .offerBtn.js_btn1 Заказать
+            .content__title
+              h1 [[!*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]`]]
+            .content
+              | [[*content]]
+      .manufacturersCarousel__area
+        .manufacturersCarousel__wrapper
+          .title1.title1_white.title1_manufacturer Производители
+          .manufacturersCarousel
+            .swiper-container.manufacturersCarousel-container
+              .swiper-wrapper
+                .swiper-slide.manufacturersCarousel__slider
+                  img(src="assets/img/man/01.jpg", alt="[[+title]]")
+                .swiper-slide.manufacturersCarousel__slider
+                  img(src="assets/img/man/02.jpg", alt="[[+title]]")
+                .swiper-slide.manufacturersCarousel__slider
+                  img(src="assets/img/man/03.jpg", alt="[[+title]]")
+                .swiper-slide.manufacturersCarousel__slider
+                  img(src="assets/img/man/04.jpg", alt="[[+title]]")
+                .swiper-slide.manufacturersCarousel__slider
+                  img(src="assets/img/man/05.jpg", alt="[[+title]]")
+                .swiper-slide.manufacturersCarousel__slider
+                  img(src="assets/img/man/06.jpg", alt="[[+title]]")
+                
+                
+            .xSwiper__left.manufacturersCarousel__left
+              i.fa.fa-angle-left(aria-hidden='true')
+            .xSwiper__right.manufacturersCarousel__right
+              i.fa.fa-angle-right(aria-hidden='true')
+          .xSwiper__pagination.manufacturersCarousel__pagination
+      
+      .gallery__area
+        .gallery__outer
+          .title1 Галерея
+          .rows.gallery
+            .gallery__item
+              a.fancybox(href="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=750&amp;h=800&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F2%2F13.jpg", data-fancybox="group")
+                img(src="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=220&amp;h=220&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F2%2F13.jpg", alt="Image00001.jpg", title="")
+            .gallery__item
+              a.fancybox(href="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=750&amp;h=800&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F2%2F14.jpg", data-fancybox="group")
+                img(src="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=220&amp;h=220&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F2%2F14.jpg", alt="Image00002.jpg", title="")
+            .gallery__item
+              a.fancybox(href="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=750&amp;h=800&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F2%2F15.jpg", data-fancybox="group")
+                img(src="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=220&amp;h=220&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F2%2F15.jpg", alt="Image00003.jpg", title="")
+            .gallery__item
+              a.fancybox(href="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=750&amp;h=800&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F2%2F16.jpg", data-fancybox="group")
+                img(src="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=220&amp;h=220&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F2%2F16.jpg", alt="Image00004.jpg", title="")
+          .pagin
+            ul.pagination
+
+      .form1__area
+        .form1__outer
+          .form1__title
+            .title1 Обратная связь
+            span Вы можете отправить нам свой вопрос с помощью этой формы и мы обязательно на него ответим.
+          form.form1(action="#")
+            input.name1(name="name1", type="text", placeholder="Ваше имя")
+            input.phone1(name="phone1", type="text", placeholder="Укажите Ваш номер")
+            input.email1(name="email1", type="text", placeholder="Укажите Ваш email")
+            input(class="work_email1", name="work_email1", type="text", placeholder="Рабочий email")
+            textarea.message1(name="message1", cols="30", rows="10", placeholder="Ваше сообщение")
+            .lookout1 *Отправляя сообщение Вы соглашаетесь с условиями 
+              a(href="[[~31]]", target="_blank") политики конфиденциальности
+            script(src="https://www.google.com/recaptcha/api.js")
+            .g-recaptcha(data-sitekey="6LdT2ccUAAAAANKHZQRdZfseBUMNTDsaO-b6vMzH")
+            button.submit1(type="submit", name="submit1")
+              | Отправить сообщение
+      
+      .footer__area
+        footer.footer
+          .copyright
+            span © Сарремонт 2024
+            .oferta Информация на сайте не является публичной офертой
+            a.policy(href="privacy-policy.html") Политика конфиденциальности
+            span Сайт сделан Web-студией 
+              a(href="https://site-a.ru" target="_blank") "Сайт-А"
+          nav
+            ul.footerMenu
+              li.first.active
+                a(href="/") Главная
+              li
+                a(href="servises/") Наши услуги
+              li
+                a(href="price.html") Цены
+              li
+                a(href="actions/") Акции
+              li.last
+                a(href="kontaktyi.html") Контакты
+          .counter
+        
+    .overlay
+      .js_container1.popupCallBack.animated
+        .formZ__area
+          .formZ_title Оставьте Ваше имя и номер телефона и мы перезвоним
+          form.formZ(method="post", action="#")
+            input.nameZ(name="nameZ", type="text", placeholder="Ваше имя")
+            input.phoneZ(name="phoneZ", type="text", placeholder="Укажите Ваш номер")
+            input(class="work_emailZ", name="work_emailZ", type="text", placeholder="Рабочий email")
+            button.submitZ(type="submit", name="submitZ")
+              | Заказать звонок
+            .lookout2 *Отправляя сообщение Вы соглашаетесь с условиями 
+              a(href="[[~31]]", target="_blank") политики конфиденциальности
+    
+    #scroller.toTop
+
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/app.js")

@@ -1,0 +1,62 @@
+mixin mainSlider
+  .mainSlider
+    .swiper-container.swiper-container1
+      .swiper-wrapper
+        .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/01.jpg);')
+          .swiper__cadr
+            .swiper__inner1
+              .swiper__title1
+                | РЕМОНТ КВАРТИР
+              .swiper__text1
+                | Капитальный ремонт квартир в Саратове и Энгельсе от профессионалов по отличной цене!
+              .swiper__link1
+                a(href='#') Подробнее...
+        .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/02.jpg);')
+          .swiper__cadr
+            .swiper__inner1
+              .swiper__title1
+                | ВНУТРЕННЯЯ ОТДЕЛКА ДЕРЕВОМ
+              .swiper__text1
+                | Профессиональный дизайн помещений
+              .swiper__link1
+                a(href='#') Подробнее...
+        .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/03.jpg);')
+          .swiper__cadr
+            .swiper__inner1
+              .swiper__title1
+                | Пристройки, веранды, террасы
+              .swiper__text1
+                | Открытые и закрытые, по каркасной технологии, быстро и качественно!
+              .swiper__link1
+                a(href='#') Подробнее...
+      .xSwiper__left.mainSlider__left
+        i.fa.fa-angle-left(aria-hidden='true')
+      .xSwiper__right.mainSlider__right
+        i.fa.fa-angle-right(aria-hidden='true')
+      .xSwiper__pagination.mainSlider__pagination
+
+mixin slider1 
+  .slider1__area
+    .slider1
+      ul.slides
+        li
+          .slider1__row
+            span(class="slider1__title") Капитальный ремонт квартир в Саратове и Энгельсе от профессионалов по отличной цене!
+            a(class="slider1__redmore animated", href="#") Подробнее...
+            img(src="assets/img/slider1/01.jpg", alt="[[+name]]")
+        li
+          .slider1__row
+            span(class="slider1__title") Профессиональный дизайн помещений
+            a(class="slider1__redmore animated", href="#") Подробнее...
+            img(src="assets/img/slider1/02.jpg", alt="[[+name]]")
+        li
+          .slider1__row
+            span(class="slider1__title") Евроремонт по современным технологиям
+            a(class="slider1__redmore animated", href="#") Подробнее...
+            img(src="assets/img/slider1/03.jpg", alt="[[+name]]")
+      .custom-navigation1
+        a.flex-prev(href="#")
+          i.fa.fa-chevron-left(aria-hidden="true")
+        .custom-controls-container1
+        a.flex-next(href="#")
+          i.fa.fa-chevron-right(aria-hidden="true")

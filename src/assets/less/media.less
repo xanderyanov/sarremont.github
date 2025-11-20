@@ -1,0 +1,401 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1300px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        width: 100%;
+    }
+    .header__logo span{
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 45px;
+    }
+
+    .topMenu__outer {
+        width: 100%;
+    }
+
+    .slider1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .content__outer {
+        width: 100%;
+        margin: auto;
+    }
+
+    .manufacturer {
+        width: 100%;
+        margin: auto;
+    }
+
+    .catalog__outer {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .catalog {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .catalog__item {
+        padding: 5px;
+        width: 25%;
+    }
+
+    .gallery__outer {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .gallery {
+        margin: 0 -5px;
+    }
+
+    .gallery__item {
+        padding: 0 5px 5px 5px;
+    }
+
+    .form1__outer {
+        width: 100%;
+        margin: auto;
+    }
+
+    .footer {
+        width: 100%;
+        margin: auto;
+    }
+
+    /*.jcarousel {*/
+    /*width: 100%;*/
+    /*margin: auto;*/
+    /*}*/
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .header__logo {
+        width: 35%;
+        /*-webkit-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.75);*/
+        /*-moz-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.75);*/
+        /*box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.75);*/
+    }
+
+    .catalog__item {
+        width: 25%;
+    }
+
+    .gallery__item {
+        width: 25%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 920px) {
+    .header__logo span{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+    .menuButton__outer {
+        display: block;
+    }
+
+    .topMenu {
+        flex-direction: column;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .topMenu li {
+        display: block;
+    }
+
+    .topMenu li a {
+        display: block;
+        text-align: center;
+    }
+
+
+    .catalog__item {
+        width: 33.3333%;
+    }
+    /*.jcarousel-wrapper {*/
+    /*position: relative;*/
+    /*padding: 0 25px;*/
+    /*}*/
+    .header__newInfo{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    .header__newInfo span{
+        font-size: 18px;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    .like__area {
+        width: 50%;
+    }
+    .search__area {
+        width: 50%;
+    }
+    .header {
+        flex-wrap: wrap;
+        padding: 0 0 10px 0;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+    }
+    .header__logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        width: 60%;
+        margin: 0;
+        order: 1;
+    }
+    .header__newInfo{
+        width: 100%;
+        order: 2;
+    }
+    .header__info{
+        display: flex;
+        /*align-items: flex-start;*/
+        color: #fff;
+        flex-direction: column;
+        margin: 0;
+        order: 3;
+        width: 40%;
+    }
+
+
+    .header__goForm {
+        order: 0;
+        width: 100%;
+        border-radius: 0px;
+        margin-bottom: 10px;
+
+    }
+
+    .formZ {
+        flex-direction: column;
+    }
+
+    .formZ input {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .submitZ {
+        width: 90%;
+    }
+
+
+
+    .gallery__item {
+        width: 33.3333%;
+    }
+
+    .content__inner {
+        padding: 10px;
+    }
+
+    .form1 input {
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .copyright{
+        margin-bottom: 10px;
+    }
+    .footerMenu{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .header__logo{
+
+        width: 100%;
+        order: 1;
+    }
+    .header__info{
+        align-items: center;
+        color: #fff;
+        flex-direction: column;
+        margin: 0;
+        order: 2;
+        width: 100%;
+    }
+
+    .catalog__item {
+        width: 50%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+	.site{
+	    padding-top: 2px;
+	}
+	.topBlock__area {
+	    order: 20;
+	}
+	.footer__area {
+	    order: 21;
+	}
+	.menuButton__outer {
+	    padding: 10px;
+	}
+
+
+    .topBlock{
+        flex-direction: column;
+    }
+    .like__area {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .likeBlock{
+        justify-content: center;
+    }
+    .search__area {
+        width: 100%;
+    }
+    .header {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .header__goForm {
+        order: 0;
+        width: 100%;
+        border-radius: 0px;
+        margin-bottom: 10px;
+
+    }
+
+    .header__logo {
+        /*width: 60%;*/
+        order: 1;
+        /*margin: 0 0 10px 0;*/
+    }
+
+    .header__logo a{
+
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .header__logo img{
+        width: 75px;
+    }
+    .header__logo span{
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-left: 20px;
+    }
+    .slogan1 {
+	    font-size: 22px;
+	    font-weight: 300;
+	    line-height: 30px;
+	    margin-top: 5px;
+	}
+
+    .header__info {
+        order: 2;
+        margin: 0;
+    }
+
+    .slider1__area {
+        display: none;
+    }
+
+
+
+    .gallery__item {
+        width: 50%;
+    }
+
+    .content__inner {
+        padding: 5px;
+    }
+
+    .content img {
+        margin: 0 0 10px 0 !important;
+        float: none !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .content ul li{
+        margin: 0 0 5px 0;
+        padding: 0 0 0 5px;
+    }
+    .content ol li {
+        margin: 0 0 5px 0;
+        padding: 0 0 0 30px;
+    }
+    .footerMenu{
+        flex-direction: column;
+    }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+    .catalog__item {
+        width: 100%;
+    }
+
+    .gallery__item {
+        width: 100%;
+    }
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+
+}
